@@ -1,0 +1,6 @@
+<h1>Chats</h1>
+<%= link_to "New Chat", new_chat_path %>
+
+<% @chats.each do |chat| %>
+  <%= link_to chat.title, chat_path(chat) %><br>
+<% end %>

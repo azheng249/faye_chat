@@ -1,3 +1,20 @@
 class ChatsController < ApplicationController
 
+  def index
+    @chats = Chat.all
+  end
+
+  def show
+    @chat = Chat.find_by(id: params[:id])
+  end
+
+  def new
+    @chat = Chat.new
+  end
+
+  def create
+    @chat = chat.create(title: params[:title])
+    redirect_to chats_path
+  end
+
 end
