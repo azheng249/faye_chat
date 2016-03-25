@@ -1,0 +1,5 @@
+This is a small project to experiment with the Private Pub gem. The goal is to get a simple chat client working. It should have a Chat and a Message model. Every message belongs to a chat and you can create new chats and messages but not edit them. The form a new message should be inside the chat show page. 
+
+The project uses private_pub which is based off the Faye gem, which runs EventMachine on a Thin server for asynchronous events. Clients will be connecting to a websocket server which is a new technology built on top of TCP. It is supported in HTML5 and is a new technology I want to experiment with. I want to use this as a stepping stone to making a larger application later.
+
+The end goal of this is to see whether I can get multiple websocket connections open on the server side so that you can have multiple chat rooms. 
