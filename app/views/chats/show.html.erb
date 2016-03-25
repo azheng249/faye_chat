@@ -1,3 +1,7 @@
-<h1><%= @chat.title %> chatroom</h1>
+<h1><%= @chat.title %> Chatroom</h1>
 
-<%= render partial: 'chats/chat' %>
+<ul id="chat">
+  <%= render @messages %>
+</ul>
+
+<%= render partial: 'messages/form', locals: {chat_id: @chat.id} %>

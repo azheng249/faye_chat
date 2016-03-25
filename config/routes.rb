@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :chats, only: [:new, :create, :index, :show]
-  resources :messages, only: [:new, :create]
+  resources :messages, only: [:create]
 
   root 'chats#index'
   # The priority is based upon order of creation: first created -> highest priority.

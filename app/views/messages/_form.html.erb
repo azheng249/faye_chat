@@ -1,0 +1,7 @@
+<%= form_for Message.new, remote: true do |f| %>
+  <%= f.hidden_field :chat_id, chat_id %>
+
+  <%= t.text_field :content %>
+
+  <%= f.submit "Send" %>
+<% end %>
