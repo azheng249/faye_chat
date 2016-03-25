@@ -1,0 +1,12 @@
+// Javascript file will run while posting to /messages. 
+// A new message is created by MessagesController, 
+// while this Javascript publishes the message back to the chatroom's path and resets the #new_message form.
+
+
+// Publish a message to the current chatroom. Other clients also subscribed should get the messages
+<%= publish_to chat_path(@chat) do %>
+  $("#chat").append("<%= j render(@message) %>");
+<% end %>
+
+// Reset new message
+$("#new_message").reset();

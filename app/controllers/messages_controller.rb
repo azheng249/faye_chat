@@ -6,6 +6,6 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(content: params[:content], chat_id: params[:chat_id])
-    redirect_to chat_path(@message.chat)
+    # PrivatePub.publish_to(params[:chat_url])
   end
 end

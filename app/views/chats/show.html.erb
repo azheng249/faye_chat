@@ -1,7 +1,11 @@
 <h1><%= @chat.title %> Chatroom</h1>
 
 <ul id="chat">
-  <%= render @messages %>
+  <%= render @messages if @message.any? %>
 </ul>
 
 <%= render partial: 'messages/form', locals: {chat_id: @chat.id} %>
+
+<!-- Subscribe to current chatroom -->
+<!-- Will receive messages that are published to this chatroom -->
+<%= subscribe_to chat_path(@chat) %>
