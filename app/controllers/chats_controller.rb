@@ -14,7 +14,7 @@ class ChatsController < ApplicationController
   end
 
   def create
-    @chat = chat.create(title: params[:title])
+    @chat = Chat.create(title: params[:title])
     redirect_to chats_path
   end
 

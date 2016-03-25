@@ -1,8 +1,7 @@
-<%= form_for Message.new, remote: true, :html => {:id => 'new_message'} do |f| %>
-  <%= f.hidden_field :chat_id, chat_id %>
-  <%= f.hidden_field :chat_url, request.original_fullpath %>
+<%= form_for Message.new, remote: true, :html => {:id => 'new_message'} do %>
+  <%= hidden_field_tag "chat_id", chat_id %>
 
-  <%= t.text_field :content, id: 'new_message' %>
+  <%= text_field_tag "content" %>
 
-  <%= f.submit "Send" %>
+  <%= submit_tag "Send" %>
 <% end %>
