@@ -4,7 +4,13 @@
   <%= render @messages %>
 </ul>
 
-<%= render partial: 'messages/form', locals: {chat_id: @chat.id.to_s} %>
+<%= form_for Message.new, remote: true do |f| %>
+  <%= hidden_field_tag 'message[chat_id]' , @chat.id %>
+
+  <%= f.text_field :content %>
+
+  <%= f.submit "Send" %>
+<% end %>
 
 <!-- Subscribe to current chatroom -->
 <!-- Will receive messages that are published to this chatroom -->

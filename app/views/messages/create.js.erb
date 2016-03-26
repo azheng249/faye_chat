@@ -6,7 +6,5 @@
 // Publish a message to the current chatroom. Other clients also subscribed should get the messages
 <%= publish_to chat_path(@chat) do %>
   $("#chat").append("<%= j render(@message) %>");
+  $("#new_message")[0].reset();
 <% end %>
-
-// Reset new message
-$("#new_message").reset();

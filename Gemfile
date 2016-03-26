@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Private pub for publish and subscribe events with websockets.
+gem 'faye'
 gem 'private_pub'
 gem 'thin'
 

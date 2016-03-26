@@ -1,7 +1,0 @@
-<%= form_for Message.new, remote: true, :html => {:id => 'new_message'} do %>
-  <%= hidden_field_tag "chat_id", chat_id %>
-
-  <%= text_field_tag "content" %>
-
-  <%= submit_tag "Send" %>
-<% end %>
